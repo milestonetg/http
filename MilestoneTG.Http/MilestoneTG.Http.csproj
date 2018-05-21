@@ -9,6 +9,15 @@
       * GZipCompressionDelegatingHandler
       * DeflateCompressionDelegatingHandler
     </Description>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/milestonetg/http/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/milestonetg/http</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/milestonetg/http</RepositoryUrl>
+    <PackageTags>HttpClient;Compression;Microservices</PackageTags>
+    <RepositoryType>github</RepositoryType>
+    <DebugType>Full</DebugType>
+    <PackageReleaseNotes>
+      See https://github.com/milestonetg/http/blob/master/CHANGELOG.md
+    </PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup Condition="'net45'=='$(TargetFramework)'">
     <Reference Include="System.Net.Http" />
