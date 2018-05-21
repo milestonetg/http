@@ -1,7 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>milestonetg</Authors>
+    <Description>
+      Extensions for System.Net.Http.
+      Common Types:
+      * GZipCompressionDelegatingHandler
+      * DeflateCompressionDelegatingHandler
+    </Description>
   </PropertyGroup>
-
+  <ItemGroup Condition="'net45'=='$(TargetFramework)'">
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup Condition="'netstandard1.1'=='$(TargetFramework)'">
+    <PackageReference Include="System.Net.Http" Version="4.3.2" />
+  </ItemGroup>
 </Project>
